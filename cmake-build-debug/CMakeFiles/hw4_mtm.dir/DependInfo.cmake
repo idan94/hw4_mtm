@@ -4,6 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/idanc/CLionProjects/hw4_mtm/Game.cpp" "C:/Users/idanc/CLionProjects/hw4_mtm/cmake-build-debug/CMakeFiles/hw4_mtm.dir/Game.cpp.obj"
+  "C:/Users/idanc/CLionProjects/hw4_mtm/Player.cpp" "C:/Users/idanc/CLionProjects/hw4_mtm/cmake-build-debug/CMakeFiles/hw4_mtm.dir/Player.cpp.obj"
+  "C:/Users/idanc/CLionProjects/hw4_mtm/Weapon.cpp" "C:/Users/idanc/CLionProjects/hw4_mtm/cmake-build-debug/CMakeFiles/hw4_mtm.dir/Weapon.cpp.obj"
   "C:/Users/idanc/CLionProjects/hw4_mtm/main.cpp" "C:/Users/idanc/CLionProjects/hw4_mtm/cmake-build-debug/CMakeFiles/hw4_mtm.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

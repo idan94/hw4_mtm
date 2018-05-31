@@ -80,19 +80,97 @@ CMakeFiles/hw4_mtm.dir/main.cpp.obj.provides: CMakeFiles/hw4_mtm.dir/main.cpp.ob
 CMakeFiles/hw4_mtm.dir/main.cpp.obj.provides.build: CMakeFiles/hw4_mtm.dir/main.cpp.obj
 
 
+CMakeFiles/hw4_mtm.dir/Weapon.cpp.obj: CMakeFiles/hw4_mtm.dir/flags.make
+CMakeFiles/hw4_mtm.dir/Weapon.cpp.obj: ../Weapon.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\idanc\CLionProjects\hw4_mtm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hw4_mtm.dir/Weapon.cpp.obj"
+	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hw4_mtm.dir\Weapon.cpp.obj -c C:\Users\idanc\CLionProjects\hw4_mtm\Weapon.cpp
+
+CMakeFiles/hw4_mtm.dir/Weapon.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hw4_mtm.dir/Weapon.cpp.i"
+	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\idanc\CLionProjects\hw4_mtm\Weapon.cpp > CMakeFiles\hw4_mtm.dir\Weapon.cpp.i
+
+CMakeFiles/hw4_mtm.dir/Weapon.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hw4_mtm.dir/Weapon.cpp.s"
+	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\idanc\CLionProjects\hw4_mtm\Weapon.cpp -o CMakeFiles\hw4_mtm.dir\Weapon.cpp.s
+
+CMakeFiles/hw4_mtm.dir/Weapon.cpp.obj.requires:
+
+.PHONY : CMakeFiles/hw4_mtm.dir/Weapon.cpp.obj.requires
+
+CMakeFiles/hw4_mtm.dir/Weapon.cpp.obj.provides: CMakeFiles/hw4_mtm.dir/Weapon.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\hw4_mtm.dir\build.make CMakeFiles/hw4_mtm.dir/Weapon.cpp.obj.provides.build
+.PHONY : CMakeFiles/hw4_mtm.dir/Weapon.cpp.obj.provides
+
+CMakeFiles/hw4_mtm.dir/Weapon.cpp.obj.provides.build: CMakeFiles/hw4_mtm.dir/Weapon.cpp.obj
+
+
+CMakeFiles/hw4_mtm.dir/Player.cpp.obj: CMakeFiles/hw4_mtm.dir/flags.make
+CMakeFiles/hw4_mtm.dir/Player.cpp.obj: ../Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\idanc\CLionProjects\hw4_mtm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/hw4_mtm.dir/Player.cpp.obj"
+	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hw4_mtm.dir\Player.cpp.obj -c C:\Users\idanc\CLionProjects\hw4_mtm\Player.cpp
+
+CMakeFiles/hw4_mtm.dir/Player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hw4_mtm.dir/Player.cpp.i"
+	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\idanc\CLionProjects\hw4_mtm\Player.cpp > CMakeFiles\hw4_mtm.dir\Player.cpp.i
+
+CMakeFiles/hw4_mtm.dir/Player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hw4_mtm.dir/Player.cpp.s"
+	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\idanc\CLionProjects\hw4_mtm\Player.cpp -o CMakeFiles\hw4_mtm.dir\Player.cpp.s
+
+CMakeFiles/hw4_mtm.dir/Player.cpp.obj.requires:
+
+.PHONY : CMakeFiles/hw4_mtm.dir/Player.cpp.obj.requires
+
+CMakeFiles/hw4_mtm.dir/Player.cpp.obj.provides: CMakeFiles/hw4_mtm.dir/Player.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\hw4_mtm.dir\build.make CMakeFiles/hw4_mtm.dir/Player.cpp.obj.provides.build
+.PHONY : CMakeFiles/hw4_mtm.dir/Player.cpp.obj.provides
+
+CMakeFiles/hw4_mtm.dir/Player.cpp.obj.provides.build: CMakeFiles/hw4_mtm.dir/Player.cpp.obj
+
+
+CMakeFiles/hw4_mtm.dir/Game.cpp.obj: CMakeFiles/hw4_mtm.dir/flags.make
+CMakeFiles/hw4_mtm.dir/Game.cpp.obj: ../Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\idanc\CLionProjects\hw4_mtm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/hw4_mtm.dir/Game.cpp.obj"
+	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hw4_mtm.dir\Game.cpp.obj -c C:\Users\idanc\CLionProjects\hw4_mtm\Game.cpp
+
+CMakeFiles/hw4_mtm.dir/Game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hw4_mtm.dir/Game.cpp.i"
+	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\idanc\CLionProjects\hw4_mtm\Game.cpp > CMakeFiles\hw4_mtm.dir\Game.cpp.i
+
+CMakeFiles/hw4_mtm.dir/Game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hw4_mtm.dir/Game.cpp.s"
+	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\idanc\CLionProjects\hw4_mtm\Game.cpp -o CMakeFiles\hw4_mtm.dir\Game.cpp.s
+
+CMakeFiles/hw4_mtm.dir/Game.cpp.obj.requires:
+
+.PHONY : CMakeFiles/hw4_mtm.dir/Game.cpp.obj.requires
+
+CMakeFiles/hw4_mtm.dir/Game.cpp.obj.provides: CMakeFiles/hw4_mtm.dir/Game.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\hw4_mtm.dir\build.make CMakeFiles/hw4_mtm.dir/Game.cpp.obj.provides.build
+.PHONY : CMakeFiles/hw4_mtm.dir/Game.cpp.obj.provides
+
+CMakeFiles/hw4_mtm.dir/Game.cpp.obj.provides.build: CMakeFiles/hw4_mtm.dir/Game.cpp.obj
+
+
 # Object files for target hw4_mtm
 hw4_mtm_OBJECTS = \
-"CMakeFiles/hw4_mtm.dir/main.cpp.obj"
+"CMakeFiles/hw4_mtm.dir/main.cpp.obj" \
+"CMakeFiles/hw4_mtm.dir/Weapon.cpp.obj" \
+"CMakeFiles/hw4_mtm.dir/Player.cpp.obj" \
+"CMakeFiles/hw4_mtm.dir/Game.cpp.obj"
 
 # External object files for target hw4_mtm
 hw4_mtm_EXTERNAL_OBJECTS =
 
 hw4_mtm.exe: CMakeFiles/hw4_mtm.dir/main.cpp.obj
+hw4_mtm.exe: CMakeFiles/hw4_mtm.dir/Weapon.cpp.obj
+hw4_mtm.exe: CMakeFiles/hw4_mtm.dir/Player.cpp.obj
+hw4_mtm.exe: CMakeFiles/hw4_mtm.dir/Game.cpp.obj
 hw4_mtm.exe: CMakeFiles/hw4_mtm.dir/build.make
 hw4_mtm.exe: CMakeFiles/hw4_mtm.dir/linklibs.rsp
 hw4_mtm.exe: CMakeFiles/hw4_mtm.dir/objects1.rsp
 hw4_mtm.exe: CMakeFiles/hw4_mtm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\idanc\CLionProjects\hw4_mtm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable hw4_mtm.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\idanc\CLionProjects\hw4_mtm\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable hw4_mtm.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\hw4_mtm.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -101,6 +179,9 @@ CMakeFiles/hw4_mtm.dir/build: hw4_mtm.exe
 .PHONY : CMakeFiles/hw4_mtm.dir/build
 
 CMakeFiles/hw4_mtm.dir/requires: CMakeFiles/hw4_mtm.dir/main.cpp.obj.requires
+CMakeFiles/hw4_mtm.dir/requires: CMakeFiles/hw4_mtm.dir/Weapon.cpp.obj.requires
+CMakeFiles/hw4_mtm.dir/requires: CMakeFiles/hw4_mtm.dir/Player.cpp.obj.requires
+CMakeFiles/hw4_mtm.dir/requires: CMakeFiles/hw4_mtm.dir/Game.cpp.obj.requires
 
 .PHONY : CMakeFiles/hw4_mtm.dir/requires
 

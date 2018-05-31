@@ -1,5 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/hw4_mtm.dir/main.cpp.obj"
+  "CMakeFiles/hw4_mtm.dir/Weapon.cpp.obj"
+  "CMakeFiles/hw4_mtm.dir/Player.cpp.obj"
+  "CMakeFiles/hw4_mtm.dir/Game.cpp.obj"
   "hw4_mtm.pdb"
   "hw4_mtm.exe"
   "hw4_mtm.exe.manifest"

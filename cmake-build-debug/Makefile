@@ -122,6 +122,87 @@ hw4_mtm/fast:
 	$(MAKE) -f CMakeFiles\hw4_mtm.dir\build.make CMakeFiles/hw4_mtm.dir/build
 .PHONY : hw4_mtm/fast
 
+Game.obj: Game.cpp.obj
+
+.PHONY : Game.obj
+
+# target to build an object file
+Game.cpp.obj:
+	$(MAKE) -f CMakeFiles\hw4_mtm.dir\build.make CMakeFiles/hw4_mtm.dir/Game.cpp.obj
+.PHONY : Game.cpp.obj
+
+Game.i: Game.cpp.i
+
+.PHONY : Game.i
+
+# target to preprocess a source file
+Game.cpp.i:
+	$(MAKE) -f CMakeFiles\hw4_mtm.dir\build.make CMakeFiles/hw4_mtm.dir/Game.cpp.i
+.PHONY : Game.cpp.i
+
+Game.s: Game.cpp.s
+
+.PHONY : Game.s
+
+# target to generate assembly for a file
+Game.cpp.s:
+	$(MAKE) -f CMakeFiles\hw4_mtm.dir\build.make CMakeFiles/hw4_mtm.dir/Game.cpp.s
+.PHONY : Game.cpp.s
+
+Player.obj: Player.cpp.obj
+
+.PHONY : Player.obj
+
+# target to build an object file
+Player.cpp.obj:
+	$(MAKE) -f CMakeFiles\hw4_mtm.dir\build.make CMakeFiles/hw4_mtm.dir/Player.cpp.obj
+.PHONY : Player.cpp.obj
+
+Player.i: Player.cpp.i
+
+.PHONY : Player.i
+
+# target to preprocess a source file
+Player.cpp.i:
+	$(MAKE) -f CMakeFiles\hw4_mtm.dir\build.make CMakeFiles/hw4_mtm.dir/Player.cpp.i
+.PHONY : Player.cpp.i
+
+Player.s: Player.cpp.s
+
+.PHONY : Player.s
+
+# target to generate assembly for a file
+Player.cpp.s:
+	$(MAKE) -f CMakeFiles\hw4_mtm.dir\build.make CMakeFiles/hw4_mtm.dir/Player.cpp.s
+.PHONY : Player.cpp.s
+
+Weapon.obj: Weapon.cpp.obj
+
+.PHONY : Weapon.obj
+
+# target to build an object file
+Weapon.cpp.obj:
+	$(MAKE) -f CMakeFiles\hw4_mtm.dir\build.make CMakeFiles/hw4_mtm.dir/Weapon.cpp.obj
+.PHONY : Weapon.cpp.obj
+
+Weapon.i: Weapon.cpp.i
+
+.PHONY : Weapon.i
+
+# target to preprocess a source file
+Weapon.cpp.i:
+	$(MAKE) -f CMakeFiles\hw4_mtm.dir\build.make CMakeFiles/hw4_mtm.dir/Weapon.cpp.i
+.PHONY : Weapon.cpp.i
+
+Weapon.s: Weapon.cpp.s
+
+.PHONY : Weapon.s
+
+# target to generate assembly for a file
+Weapon.cpp.s:
+	$(MAKE) -f CMakeFiles\hw4_mtm.dir\build.make CMakeFiles/hw4_mtm.dir/Weapon.cpp.s
+.PHONY : Weapon.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -158,6 +239,15 @@ help:
 	@echo ... hw4_mtm
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Game.obj
+	@echo ... Game.i
+	@echo ... Game.s
+	@echo ... Player.obj
+	@echo ... Player.i
+	@echo ... Player.s
+	@echo ... Weapon.obj
+	@echo ... Weapon.i
+	@echo ... Weapon.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

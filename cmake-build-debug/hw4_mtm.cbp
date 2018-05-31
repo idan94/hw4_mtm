@@ -82,7 +82,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/idanc/CLionProjects/hw4_mtm/Game.cpp">
+			<Option target="hw4_mtm"/>
+		</Unit>
 		<Unit filename="C:/Users/idanc/CLionProjects/hw4_mtm/Game.h">
+			<Option target="hw4_mtm"/>
+		</Unit>
+		<Unit filename="C:/Users/idanc/CLionProjects/hw4_mtm/Player.cpp">
+			<Option target="hw4_mtm"/>
+		</Unit>
+		<Unit filename="C:/Users/idanc/CLionProjects/hw4_mtm/Player.h">
+			<Option target="hw4_mtm"/>
+		</Unit>
+		<Unit filename="C:/Users/idanc/CLionProjects/hw4_mtm/Weapon.cpp">
+			<Option target="hw4_mtm"/>
+		</Unit>
+		<Unit filename="C:/Users/idanc/CLionProjects/hw4_mtm/Weapon.h">
 			<Option target="hw4_mtm"/>
 		</Unit>
 		<Unit filename="C:/Users/idanc/CLionProjects/hw4_mtm/main.cpp">
