@@ -5,4 +5,11 @@
 #ifndef HW4_MTM_WEAPON_H
 #define HW4_MTM_WEAPON_H
 
+enum Target {
+    LEVEL,
+    STRENGTH,
+    LIFE
+};
+
+
 #endif //HW4_MTM_WEAPON_H

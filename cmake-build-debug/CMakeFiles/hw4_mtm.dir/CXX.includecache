@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/idanc/CLionProjects/hw4_mtm/Game.cpp
+
+C:/Users/idanc/CLionProjects/hw4_mtm/Player.cpp
+
+C:/Users/idanc/CLionProjects/hw4_mtm/Weapon.cpp
+cstring
+-
+Weapon.h
+C:/Users/idanc/CLionProjects/hw4_mtm/Weapon.h
+
+C:/Users/idanc/CLionProjects/hw4_mtm/Weapon.h
+
 C:/Users/idanc/CLionProjects/hw4_mtm/main.cpp
 iostream
 -
