@@ -7,8 +7,22 @@
 #IncludeRegexTransform: 
 
 C:/Users/idanc/CLionProjects/hw4_mtm/Game.cpp
+Game.h
+C:/Users/idanc/CLionProjects/hw4_mtm/Game.h
+
+C:/Users/idanc/CLionProjects/hw4_mtm/Game.h
+Player.h
+C:/Users/idanc/CLionProjects/hw4_mtm/Player.h
+Weapon.h
+C:/Users/idanc/CLionProjects/hw4_mtm/Weapon.h
 
 C:/Users/idanc/CLionProjects/hw4_mtm/Player.cpp
+Player.h
+C:/Users/idanc/CLionProjects/hw4_mtm/Player.h
+
+C:/Users/idanc/CLionProjects/hw4_mtm/Player.h
+Weapon.h
+C:/Users/idanc/CLionProjects/hw4_mtm/Weapon.h
 
 C:/Users/idanc/CLionProjects/hw4_mtm/Weapon.cpp
 cstring
@@ -17,6 +31,8 @@ Weapon.h
 C:/Users/idanc/CLionProjects/hw4_mtm/Weapon.h
 
 C:/Users/idanc/CLionProjects/hw4_mtm/Weapon.h
+cstring
+-
 
 C:/Users/idanc/CLionProjects/hw4_mtm/main.cpp
 iostream
