@@ -26,9 +26,9 @@ public:
     //Destructor:
     ~Game() = default;
     //Copy Constractor:
-    Game(Game& game)= default;
+    Game(const Game& game);
     //Assignment Operator:
-    Game& operator=(const Game& game) = default;
+    Game& operator=(const Game& game);
     //Methods:
     GameStatus addPlayer(const char* playerName,const char* weaponName,
                          Target target, int hit_strength);
@@ -36,7 +36,7 @@ public:
     GameStatus makeStep(const char* playerName);
     GameStatus addLife(const char* playerName);
     GameStatus addStrength(const char* playerName, int strengthToAdd);
-    bool removeAllPlayersWithWeakWeapon(int weaponStrength);
+    bool removeAllPlayersWIthWeakWeapon(int weaponStrength);
 
     GameStatus fight(const char* playerName1, const char* playerName2);
     //Print Operator:

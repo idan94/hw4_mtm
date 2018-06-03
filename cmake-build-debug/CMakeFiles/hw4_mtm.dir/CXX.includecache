@@ -47,6 +47,8 @@ cassert
 -
 cstring
 -
+fstream
+-
 Game.h
 C:/Users/idanc/CLionProjects/hw4_mtm/Game.h
 

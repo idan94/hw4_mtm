@@ -34,7 +34,7 @@ Player::Player():
 
 
 
-//Copy Constructor
+//Assignment Operator:
 Player& Player::operator=(const Player& player){
     if(this == &player) return *this;
     if(player.name== nullptr){

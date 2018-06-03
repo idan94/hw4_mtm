@@ -9,10 +9,30 @@
 Game::Game(int maxPlayers):
 maxPlayers(maxPlayers), players_array(new Player[maxPlayers]), num_of_players(0) {}
 //Destructor: default
-//Assignment Operator: default
+//Copy Constractor:
+Game::Game(const Game& game){
+    maxPlayers=game.maxPlayers;
+    num_of_players=game.num_of_players;
+    for (int i = 0; i < maxPlayers; ++i) {
+        players_array[i]=game.players_array[i];
+    }
+}
+//Assignment Operator:
+Game& Game::operator=(const Game& game){
+    if(this == &game) return *this;
+    delete []players_array;
+    players_array=new Player[maxPlayers];
+    maxPlayers=game.maxPlayers;
+    num_of_players=game.num_of_players;
+    for (int i = 0; i < maxPlayers; ++i) {
+        players_array[i]=game.players_array[i];
+    }
+    return *this;
+}
 //Methods:
 GameStatus Game::addPlayer(const char* playerName,const char* weaponName,
                      Target target, int hit_strength) {
+    if (num_of_players >= maxPlayers) return GAME_FULL;
     for (int i = 0; i < maxPlayers; ++i) {
         if (players_array[i].name &&
             strcmp(playerName, players_array[i].name) == 0) {
@@ -21,7 +41,7 @@ GameStatus Game::addPlayer(const char* playerName,const char* weaponName,
     }
     Weapon new_weapon(weaponName, target, hit_strength);
     Player new_player(playerName, new_weapon);
-    if (num_of_players == maxPlayers) return GAME_FULL;
+
     int i(0);
     for (i = 0; i < maxPlayers; ++i) {
         if (players_array[i].name == nullptr) break;
@@ -32,31 +52,31 @@ GameStatus Game::addPlayer(const char* playerName,const char* weaponName,
 }
 GameStatus Game::nextLevel(const char* playerName) {
     for (int i = 0; i < maxPlayers; ++i) {
-        if (strcmp(players_array[i].name, playerName) == 0) {
+        if (players_array->name && strcmp(players_array[i].name, playerName) == 0) {
             players_array[i].nextLevel();
             return SUCCESS;
         }
-        return NAME_DOES_NOT_EXIST;
     }
+    return NAME_DOES_NOT_EXIST;
 }
 GameStatus Game::makeStep(const char* playerName) {
     for (int i = 0; i < maxPlayers; ++i) {
-        if (strcmp(players_array[i].name, playerName) == 0) {
+        if (players_array->name && strcmp(players_array[i].name, playerName) == 0) {
             players_array[i].makestep();
             return SUCCESS;
         }
-        return NAME_DOES_NOT_EXIST;
     }
+    return NAME_DOES_NOT_EXIST;
 }
 
 GameStatus Game::addLife(const char* playerName) {
     for (int i = 0; i < maxPlayers; ++i) {
-        if (strcmp(players_array[i].name, playerName) == 0) {
+        if (players_array->name && strcmp(players_array[i].name, playerName) == 0) {
             players_array[i].addLife();
             return SUCCESS;
         }
-        return NAME_DOES_NOT_EXIST;
     }
+    return NAME_DOES_NOT_EXIST;
 }
 GameStatus Game::addStrength(const char* playerName, int strengthToAdd) {
     if (strengthToAdd < 0) return INVALID_PARAM;
@@ -65,7 +85,6 @@ GameStatus Game::addStrength(const char* playerName, int strengthToAdd) {
             players_array[i].addStrength(strengthToAdd);
             return SUCCESS;
         }
-
     }
     return NAME_DOES_NOT_EXIST;
 }
@@ -86,7 +105,7 @@ void Game::assignArrToLeft()const {
         }
     }
 }
-bool Game::removeAllPlayersWithWeakWeapon(int weaponStrength) {
+bool Game::removeAllPlayersWIthWeakWeapon(int weaponStrength) {
     bool players_removed = false;
     for (int i = 0; i < maxPlayers; ++i) {
         Player &temp = players_array[i];
@@ -103,7 +122,7 @@ bool Game::removeAllPlayersWithWeakWeapon(int weaponStrength) {
 GameStatus Game::fight(const char* playerName1, const char* playerName2) {
     int a(NOT_EXIST_INDEX);
     int b(NOT_EXIST_INDEX);
-    for (int i = 0; i < maxPlayers; ++i) {
+    for (int i = 0; i < maxPlayers && (a==NOT_EXIST_INDEX || b==NOT_EXIST_INDEX); ++i) {
         if (players_array[i].name &&
             strcmp(players_array[i].name, playerName1) == 0) {
             a = i;
@@ -113,7 +132,7 @@ GameStatus Game::fight(const char* playerName1, const char* playerName2) {
             b = i;
         }
     }
-    if (a + b < 0) return NAME_DOES_NOT_EXIST;
+    if (a==NOT_EXIST_INDEX || b==NOT_EXIST_INDEX) return NAME_DOES_NOT_EXIST;
     Player &player_a = players_array[a];
     Player &player_b = players_array[b];
     if (!players_array[a].fight(players_array[b])) return FIGHT_FAILED;

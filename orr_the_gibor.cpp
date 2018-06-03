@@ -1,12 +1,10 @@
 #include <iostream>
-#include <cassert>
-#include <cstring>
-#include <fstream>
 #include "Game.h"
-
+#include "cassert"
+#include <fstream>
+using std::ofstream;
 using std::cout;
 using std::endl;
-using std::ofstream;
 
 Game InputTest() {
     cout << "cheak input Test" << endl;
@@ -152,33 +150,14 @@ void Test(){
     outputFile <<game;
     cout<<"GOOD LUCK ON INFI 2.0"<<endl;
 }
-void simpleTest() {
-    Game game = Game(5);
-    cout << "~~~~~~~simpleTest~~~~~~~~" <<endl;
-    assert(game.addPlayer("Linoy", "lazer gun", LEVEL, 5) == SUCCESS);
-    assert(game.addPlayer("Denis", "light saver", LIFE, 7) == SUCCESS);
-    assert(game.addPlayer("Gal", "pirate sword", STRENGTH, 6) == SUCCESS);
-    cout << game << endl;
-    assert(game.fight("Linoy", "Denis") == SUCCESS);
-    cout << game << endl;
-    assert(game.addPlayer("Alon", "lazer gun", STRENGTH, 5) == SUCCESS);
-    assert(game.addStrength("Alon", 10) == SUCCESS);
-    assert(game.fight("Alon", "Gal") == SUCCESS);
-    cout << game << endl;
-    assert(game.removeAllPlayersWIthWeakWeapon(13) == true);
-    cout << game << endl;
-}
-void myTest(){
-    cout << "~~~~~~~myTest~~~~~~~~~~" <<endl;
 
-}
+
+
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    std::cout << "Check!" << std::endl;
-    int i(2);
-    std::cout << i << std::endl;
-    myTest();
-    simpleTest();
+
+
+
     Test();
     return 0;
+
 }
