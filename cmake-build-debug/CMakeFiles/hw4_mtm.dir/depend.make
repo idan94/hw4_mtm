@@ -13,5 +13,8 @@ CMakeFiles/hw4_mtm.dir/Player.cpp.obj: ../Weapon.h
 CMakeFiles/hw4_mtm.dir/Weapon.cpp.obj: ../Weapon.cpp
 CMakeFiles/hw4_mtm.dir/Weapon.cpp.obj: ../Weapon.h
 
+CMakeFiles/hw4_mtm.dir/main.cpp.obj: ../Game.h
+CMakeFiles/hw4_mtm.dir/main.cpp.obj: ../Player.h
+CMakeFiles/hw4_mtm.dir/main.cpp.obj: ../Weapon.h
 CMakeFiles/hw4_mtm.dir/main.cpp.obj: ../main.cpp
 

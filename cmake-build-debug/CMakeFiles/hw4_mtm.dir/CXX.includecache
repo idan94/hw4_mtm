@@ -11,6 +11,8 @@ Game.h
 C:/Users/idanc/CLionProjects/hw4_mtm/Game.h
 
 C:/Users/idanc/CLionProjects/hw4_mtm/Game.h
+ostream
+-
 Player.h
 C:/Users/idanc/CLionProjects/hw4_mtm/Player.h
 Weapon.h
@@ -21,6 +23,8 @@ Player.h
 C:/Users/idanc/CLionProjects/hw4_mtm/Player.h
 
 C:/Users/idanc/CLionProjects/hw4_mtm/Player.h
+ostream
+-
 Weapon.h
 C:/Users/idanc/CLionProjects/hw4_mtm/Weapon.h
 
@@ -31,10 +35,18 @@ Weapon.h
 C:/Users/idanc/CLionProjects/hw4_mtm/Weapon.h
 
 C:/Users/idanc/CLionProjects/hw4_mtm/Weapon.h
+ostream
+-
 cstring
 -
 
 C:/Users/idanc/CLionProjects/hw4_mtm/main.cpp
 iostream
 -
+cassert
+-
+cstring
+-
+Game.h
+C:/Users/idanc/CLionProjects/hw4_mtm/Game.h
 

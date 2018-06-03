@@ -4,6 +4,8 @@
 
 #ifndef HW4_MTM_PLAYER_H
 #define HW4_MTM_PLAYER_H
+
+#include <ostream>
 #include "Weapon.h"
 
 class Player {
@@ -15,18 +17,33 @@ class Player {
     int player_location;
 
 public:
+
     //Constractors
     Player(const char *name, const Weapon& weapon);
     Player();
     //Destcator:
     ~Player()= default;
+    //Copy Constractor:
+    Player(Player& player) = default;
+    //Assignment Operator:
+    Player& operator=(const Player& player);
     //Methods:
     void nextLevel();
     bool isPlayer(const char* playerName) const;
     void makestep();
     void addLife();
     void addStrength(int strengthToAdd);
-    void isAlive() const;
+    bool isAlive() const;
+    bool weaponIsWeak(int weaponMinStrength) const;
+    bool fight(Player& player);
+    //Comparesion operators:
+    bool operator<(Player player);
+    bool operator>(Player player);
+    friend bool operator==(Player player_a, Player player_b);
+    //Print Operator:
+    friend std::ostream& operator<<(std::ostream& os, const Player& player);
+    //friend classes:
+    friend class Game;
 };
 
 #endif //HW4_MTM_PLAYER_H

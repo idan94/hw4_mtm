@@ -5,47 +5,73 @@
 #include "Weapon.h"
 
 
+//Constractors:
+Weapon::Weapon(const char *name, Target target, int hit_strength):
+    target(target),
+    hitStrength(hit_strength),
+    name(nullptr) {
+    this->name = new char[strlen(name) + 1];
+    strcpy(this->name, name);
+}
 
-    Weapon::Weapon(const char *name, Target target, int hit_strength):
-    target(target), hitStrength(hit_strength),name(nullptr) {
-        this->name = new char[strlen(name) + 1];
-        strcpy(this->name, name);
-    }
-    Weapon::Weapon():
-    target(Target(0)),hitStrength(0),name(nullptr){}
+Weapon::Weapon():
+target(Target(0)),hitStrength(0),name(nullptr){}
 
-    Target Weapon::getTarget() const {
-        return target; //return this->target
-    }
 
-    int Weapon::getHitStrength() const {
-        return hitStrength; //return this->hitStrength
-    }
+//Copy Constractor:
+Weapon::Weapon(Weapon& weapon) :
+    target(weapon.target),
+    hitStrength(weapon.hitStrength),
+    name(new char[strlen(weapon.name)+1])
+{
+    strcpy(name,weapon.name);
+}
 
-    int Weapon::getValue() const {
-        int target = getTarget();
-        int hit_strength = getHitStrength();
-        return target * hit_strength;
-    }
+//Assignment Operator:
+Weapon& Weapon::operator=(const Weapon& weapon){
+    if(this == &weapon) return *this;
 
-    bool Weapon::operator>(Weapon weapon) {
-        if (getValue() > weapon.getValue()) return true;
-        return false;
-    }
+    name=new char[strlen(weapon.name)+1];
+    strcpy(name,weapon.name);
+    target=weapon.target;
+    hitStrength=weapon.hitStrength;
+    return *this;
+}
 
-    bool Weapon::operator<(Weapon weapon) {
-        if (getValue() < weapon.getValue()) return true;
-        return false;
-    }
 
-    bool operator==(Weapon weapon_a, Weapon weapon_b) {
-        if (weapon_a.getValue() == weapon_b.getValue()) return true;
-        return false;
-    }
+//Getters:
+Target Weapon::getTarget() const {
+    return target; //return this->target
+}
 
-    bool operator!=(Weapon weapon_a, Weapon weapon_b) {
-        if (weapon_a.getValue() != weapon_b.getValue()) {
-            return true;
-        }
-        return false;
-    }
+int Weapon::getHitStrength() const {
+    return hitStrength; //return this->hitStrength
+}
+
+int Weapon::getValue() const {
+    int target = getTarget();
+    int hit_strength = getHitStrength();
+    return (target+1) * hit_strength;
+}
+
+//Comparesion operators:
+bool Weapon::operator>(Weapon weapon) {
+    return (getValue() > weapon.getValue());
+}
+
+bool Weapon::operator<(Weapon weapon) {
+    return (getValue() < weapon.getValue());
+}
+
+bool operator==(Weapon weapon_a, Weapon weapon_b) {
+    return (weapon_a.getValue() == weapon_b.getValue());
+}
+
+bool operator!=(Weapon weapon_a, Weapon weapon_b)  {
+    return (weapon_a.getValue() != weapon_b.getValue());
+}
+//Print Operator:
+std::ostream& operator<<(std::ostream& os, const Weapon& weapon){
+    os << "{weapon name: "<<weapon.name << ", weapon value:"<<weapon.getValue()<<"}" ;
+    return os;
+}

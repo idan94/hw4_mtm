@@ -4,6 +4,7 @@
 
 #ifndef HW4_MTM_WEAPON_H
 #define HW4_MTM_WEAPON_H
+#include <ostream>
 #include <cstring>
 
 
@@ -23,6 +24,10 @@ public:
     Weapon();
     //Destractor:
     ~Weapon() = default;
+    //Copy Constractor:
+    Weapon(Weapon& weapon) ;
+    //Assignment Operator:
+    Weapon& operator=(const Weapon& weapon);
     //Getters:
     Target getTarget() const;
     int getHitStrength() const;
@@ -30,8 +35,10 @@ public:
     //Comparesion operators:
     friend bool operator==(Weapon weapon_a, Weapon weapon_b);
     friend bool operator!=(Weapon weapon_a, Weapon weapon_b);
-    bool operator>(Weapon weapon);
+    bool operator>(Weapon weapon) ;
     bool operator<(Weapon weapon);
+    //Print Operator:
+    friend std::ostream& operator<<(std::ostream& os, const Weapon& weapon);
 };
 
 
