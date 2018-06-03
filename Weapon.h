@@ -24,7 +24,7 @@ public:
     Weapon();
     //Destructor:
     ~Weapon();
-    //Copy Constractor:
+    //Copy Constructor:
     Weapon(Weapon& weapon);
     //Assignment Operator:
     Weapon& operator=(const Weapon& weapon);

@@ -52,6 +52,7 @@ Player& Player::operator=(const Player& player) {
     life=player.life;
     strength=player.strength;
     weapon=player.weapon;
+    player_location=player.player_location;
     return *this;
 }
 void Player::nextLevel(){
@@ -60,7 +61,7 @@ void Player::nextLevel(){
 bool Player::isPlayer(const char* playerName) const{
     return bool(strcmp(playerName, name));
 }
-void Player::makestep(){
+void Player::makeStep(){
     player_location++;
 }
 void Player::addLife(){

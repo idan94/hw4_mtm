@@ -28,7 +28,7 @@ public:
     //Methods:
     void nextLevel();
     bool isPlayer(const char* playerName) const;
-    void makestep();
+    void makeStep();
     void addLife();
     void addStrength(int strengthToAdd);
     bool isAlive() const;

@@ -75,7 +75,7 @@ GameStatus Game::nextLevel(const char* playerName) {
 GameStatus Game::makeStep(const char* playerName) {
     for (int i = 0; i < maxPlayers; ++i) {
         if (players_array[i] && strcmp(players_array[i]->getName(), playerName) == 0) {
-            players_array[i]->makestep();
+            players_array[i]->makeStep();
             return SUCCESS;
         }
     }
