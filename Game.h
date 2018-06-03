@@ -14,17 +14,17 @@ enum GameStatus{
     GAME_FULL,
     NAME_DOES_NOT_EXIST,
     FIGHT_FAILED,
-    SUCCESS,
+    SUCCESS
 };
 class Game{
     int maxPlayers;
-    Player* players_array;
+    Player** players_array;
     int num_of_players;
 public:
     //Constractor:
-    Game(int maxPlayers);
+     explicit Game(int maxPlayers);
     //Destructor:
-    ~Game() = default;
+    ~Game();
     //Copy Constractor:
     Game(const Game& game);
     //Assignment Operator:

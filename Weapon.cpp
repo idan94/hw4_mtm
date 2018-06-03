@@ -7,22 +7,28 @@
 
 //Constructors:
 Weapon::Weapon(const char *name, Target target, int hit_strength):
+    name(nullptr),
     target(target),
-    hitStrength(hit_strength),
-    name(nullptr) {
+    hitStrength(hit_strength)
+     {
     this->name = new char[strlen(name) + 1];
     strcpy(this->name, name);
 }
 
 Weapon::Weapon():
-target(Target(0)),hitStrength(0),name(nullptr){}
+    name(nullptr),
+    target(Target(0)),
+    hitStrength(0){}
 
-
+//Destructor:
+Weapon::~Weapon(){
+    delete []name;
+}
 //Copy Constructor:
 Weapon::Weapon(Weapon& weapon) :
+    name(new char[strlen(weapon.name)+1]),
     target(weapon.target),
-    hitStrength(weapon.hitStrength),
-    name(new char[strlen(weapon.name)+1])
+    hitStrength(weapon.hitStrength)
 {
     strcpy(name,weapon.name);
 }
@@ -30,7 +36,7 @@ Weapon::Weapon(Weapon& weapon) :
 //Assignment Operator:
 Weapon& Weapon::operator=(const Weapon& weapon){
     if(this == &weapon) return *this;
-
+    delete []name;
     name=new char[strlen(weapon.name)+1];
     strcpy(name,weapon.name);
     target=weapon.target;

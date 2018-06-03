@@ -108,6 +108,7 @@ void secondFight(Game &game){
     GameStatus status;
     status=game.makeStep("tomer");
     assert(status==SUCCESS);
+    if(status) cout <<"use status"<<endl;
     (game.fight("tomer","seana")==FIGHT_FAILED)?cout<<"pass test 4"<<endl:cout<<"failed test 4"<<endl;
     for (int i = 0; i <15; i++) {
         status=game.addLife("sean");

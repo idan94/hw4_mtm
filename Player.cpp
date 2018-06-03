@@ -12,37 +12,42 @@ static void changeNegativeToZero(int &num){
 
 //Constractor
 Player::Player(const char *name, const Weapon& weapon):
+        name(),
         level(1),
         life(1),
         strength(1),
-        player_location(0),
-        name(),
-        weapon(){
+        weapon(),
+        player_location(0)
+        {
     this->name=new char[strlen(name)+1];
     strcpy(this->name,name);
     this->weapon=weapon;
-
 }
 
-Player::Player():
-    level(1),
-    life(1),
-    strength(1),
-    player_location(0),
-    name(nullptr),
-    weapon(){}
 
-
-
-//Assignment Operator:
-Player& Player::operator=(const Player& player){
-    if(this == &player) return *this;
-    if(player.name== nullptr){
-        name= nullptr;
-    }else {
-        name = new char[strlen(player.name) + 1];
+//Destructor:
+Player::~Player(){
+    delete []name;
+}
+//Copy Constructor:
+Player::Player(Player& player):
+    name(new char[strlen(player.name)+1]),
+    level(player.level),
+    life(player.life),
+    strength(player.strength),
+    weapon(player.weapon),
+    player_location(player.player_location)
+    {
         strcpy(name,player.name);
     }
+//Assignment Operator:
+Player& Player::operator=(const Player& player) {
+    if (this == &player) {
+        return (*this);
+    }
+    delete []name;
+    name = new char[strlen(player.name) + 1];
+    strcpy(name,player.name);
     level=player.level;
     life=player.life;
     strength=player.strength;
@@ -123,9 +128,11 @@ bool Player::operator>(Player player)  {
 bool Player::operator<(Player player)  {
     return(strcmp(this->name, player.name)<0);
 }
+
 bool operator==(Player player_a, Player player_b) {
-    return bool(strcmp(player_a.name,player_b.name));
+    return (strcmp(player_a.name,player_b.name)==0);
 }
+
 //Print Operator:
 std::ostream& operator<<(std::ostream& os, const Player& player){
     os << "{player name: "<<  player.name<< " ,weapon: " <<player.weapon<< "}";

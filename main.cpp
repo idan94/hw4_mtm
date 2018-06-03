@@ -103,13 +103,18 @@ void firstFight(Game &game) {
     (game.fight("tomer", "ari") == NAME_DOES_NOT_EXIST) ? cout << "pass test 2"
                                                                << endl : cout
             << "failed test 2" << endl;
-    (game.fight("sagiv", "tomer") == SUCCESS) ? cout << "pass test 3" << endl :
-    cout << "failed test 3" << endl;
+    if (game.fight("sagiv", "tomer") == SUCCESS){
+        cout << "pass test 3" << endl;
+    }    else {
+        cout << "failed test 3" << endl;
+    }
+
 }
 void secondFight(Game &game){
     GameStatus status;
     status=game.makeStep("tomer");
     assert(status==SUCCESS);
+    if(status) cout <<"use status"<<endl;
     (game.fight("tomer","seana")==FIGHT_FAILED)?cout<<"pass test 4"<<endl:cout<<"failed test 4"<<endl;
     for (int i = 0; i <15; i++) {
         status=game.addLife("sean");
@@ -167,6 +172,7 @@ void simpleTest() {
     cout << game << endl;
     assert(game.removeAllPlayersWIthWeakWeapon(13) == true);
     cout << game << endl;
+    cout << "End of Test()" << endl;
 }
 void myTest(){
     cout << "~~~~~~~myTest~~~~~~~~~~" <<endl;
@@ -180,5 +186,6 @@ int main() {
     myTest();
     simpleTest();
     Test();
+    cout << "End of main" << endl;
     return 0;
 }

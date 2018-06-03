@@ -23,7 +23,7 @@ public:
     Weapon(const char* name, Target target, int hit_strength);
     Weapon();
     //Destructor:
-    ~Weapon() = default;
+    ~Weapon();
     //Copy Constractor:
     Weapon(Weapon& weapon);
     //Assignment Operator:

@@ -15,17 +15,14 @@ class Player {
     int strength;
     Weapon weapon;
     int player_location;
-    friend class Game;
-
 public:
 
     //Constructors
     Player(const char *name, const Weapon& weapon);
-    Player();
     //Destructor:
-    ~Player()= default;
+    ~Player();
     //Copy Constructor:
-    Player(Player& player) = default;
+    Player(Player& player);
     //Assignment Operator:
     Player& operator=(const Player& player);
     //Methods:
