@@ -5,7 +5,7 @@
 #include "Weapon.h"
 
 
-//Constractors:
+//Constructors:
 Weapon::Weapon(const char *name, Target target, int hit_strength):
     target(target),
     hitStrength(hit_strength),
@@ -18,7 +18,7 @@ Weapon::Weapon():
 target(Target(0)),hitStrength(0),name(nullptr){}
 
 
-//Copy Constractor:
+//Copy Constructor:
 Weapon::Weapon(Weapon& weapon) :
     target(weapon.target),
     hitStrength(weapon.hitStrength),

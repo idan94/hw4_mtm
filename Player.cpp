@@ -31,11 +31,18 @@ Player::Player():
     player_location(0),
     name(nullptr),
     weapon(){}
+
+
+
+//Copy Constructor
 Player& Player::operator=(const Player& player){
     if(this == &player) return *this;
-
-    name=new char[strlen(player.name)+1];
-    strcpy(name,player.name);
+    if(player.name== nullptr){
+        name= nullptr;
+    }else {
+        name = new char[strlen(player.name) + 1];
+        strcpy(name,player.name);
+    }
     level=player.level;
     life=player.life;
     strength=player.strength;
@@ -56,6 +63,9 @@ void Player::addLife(){
 }
 void Player::addStrength(int strengthToAdd) {
     strength+=strengthToAdd;
+}
+const char* Player::getName(){
+    return name;
 }
 bool Player::isAlive() const {
     return (level>0 && life>0 && strength>0);

@@ -23,7 +23,7 @@ class Game{
 public:
     //Constractor:
     Game(int maxPlayers);
-    //Destractor:
+    //Destructor:
     ~Game() = default;
     //Copy Constractor:
     Game(Game& game)= default;
@@ -41,6 +41,9 @@ public:
     GameStatus fight(const char* playerName1, const char* playerName2);
     //Print Operator:
     friend std::ostream& operator<<(std::ostream& os, const Game& game);
+    void assignArrToLeft()const ;
+    void bubbleSortPlayers()const ;
+
 };
 
 

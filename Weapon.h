@@ -19,13 +19,13 @@ class Weapon{
     int hitStrength;
 
 public:
-    //Constractor:
+    //Constructor:
     Weapon(const char* name, Target target, int hit_strength);
     Weapon();
-    //Destractor:
+    //Destructor:
     ~Weapon() = default;
     //Copy Constractor:
-    Weapon(Weapon& weapon) ;
+    Weapon(Weapon& weapon);
     //Assignment Operator:
     Weapon& operator=(const Weapon& weapon);
     //Getters:

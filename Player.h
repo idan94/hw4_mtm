@@ -15,15 +15,16 @@ class Player {
     int strength;
     Weapon weapon;
     int player_location;
+    friend class Game;
 
 public:
 
-    //Constractors
+    //Constructors
     Player(const char *name, const Weapon& weapon);
     Player();
-    //Destcator:
+    //Destructor:
     ~Player()= default;
-    //Copy Constractor:
+    //Copy Constructor:
     Player(Player& player) = default;
     //Assignment Operator:
     Player& operator=(const Player& player);
@@ -34,6 +35,7 @@ public:
     void addLife();
     void addStrength(int strengthToAdd);
     bool isAlive() const;
+    const char* getName();
     bool weaponIsWeak(int weaponMinStrength) const;
     bool fight(Player& player);
     //Comparesion operators:
@@ -43,7 +45,7 @@ public:
     //Print Operator:
     friend std::ostream& operator<<(std::ostream& os, const Player& player);
     //friend classes:
-    friend class Game;
+
 };
 
 #endif //HW4_MTM_PLAYER_H
