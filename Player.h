@@ -22,7 +22,7 @@ public:
     //Destructor:
     ~Player();
     //Copy Constructor:
-    Player(Player& player);
+    Player(const Player& player);
     //Assignment Operator:
     Player& operator=(const Player& player);
     //Methods:

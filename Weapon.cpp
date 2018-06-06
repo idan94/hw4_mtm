@@ -25,7 +25,7 @@ Weapon::~Weapon(){
     delete []name;
 }
 //Copy Constructor:
-Weapon::Weapon(Weapon& weapon) :
+Weapon::Weapon(const Weapon& weapon) :
     name(new char[strlen(weapon.name)+1]),
     target(weapon.target),
     hitStrength(weapon.hitStrength)

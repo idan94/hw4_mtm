@@ -3,6 +3,7 @@
 #include <cstring>
 #include <fstream>
 #include "Game.h"
+#include "test_utilities.h"
 
 using std::cout;
 using std::endl;
@@ -178,14 +179,48 @@ void myTest(){
     cout << "~~~~~~~myTest~~~~~~~~~~" <<endl;
 
 }
+
+int GameRemoveAllPlayersWIthWeakWeaponTest(int *tests_passed) {
+    _print_mode_name("Testing GameRemoveAllPlayersWIthWeakWeapon function");
+    int test_number = 0;
+    Game game = Game(4);
+    game.addPlayer("Linoy", "lazer gun", LEVEL, 5);
+    game.addPlayer("Nazar", "lazer gun", LEVEL, 7);
+    game.addPlayer("Max", "lazer gun", LIFE, 3);
+    game.addPlayer("Guy", "lazer gun", STRENGTH, 4);
+    game.removeAllPlayersWIthWeakWeapon(6);
+    test(game.addPlayer("Linoy", "lazer gun", LEVEL, 5) != SUCCESS,
+         "GameRemoveAllPlayersWIthWeakWeapon didn't remove the player correctly.",
+         __LINE__,
+         &test_number,
+         tests_passed);
+    test(game.addPlayer("Nazar", "lazer gun", LEVEL, 5) != NAME_ALREADY_EXSISTS,
+         "GameRemoveAllPlayersWIthWeakWeapon removes players with weapon value higher than required.",
+         __LINE__,
+         &test_number,
+         tests_passed);
+    test(game.addPlayer("Max", "lazer gun", LEVEL, 5) != NAME_ALREADY_EXSISTS,
+         "GameRemoveAllPlayersWIthWeakWeapon removes players with weapon value higher than required.",
+         __LINE__,
+         &test_number,
+         tests_passed);
+    test(game.addPlayer("Guy", "lazer gun", LEVEL, 5) != NAME_ALREADY_EXSISTS,
+         "GameRemoveAllPlayersWIthWeakWeapon removes players with weapon value higher than required.",
+         __LINE__,
+         &test_number,
+         tests_passed);
+    return test_number;
+}
 int main() {
     std::cout << "Hello, World!" << std::endl;
     std::cout << "Check!" << std::endl;
     int i(2);
     std::cout << i << std::endl;
-    myTest();
-    simpleTest();
-    Test();
+    ////myTest();
+    //simpleTest();
+    //Test();
+    int a=2;
+    GameRemoveAllPlayersWIthWeakWeaponTest(&a);
     cout << "End of main" << endl;
     return 0;
 }

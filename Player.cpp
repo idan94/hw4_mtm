@@ -30,7 +30,7 @@ Player::~Player(){
     delete []name;
 }
 //Copy Constructor:
-Player::Player(Player& player):
+Player::Player(const Player& player):
     name(new char[strlen(player.name)+1]),
     level(player.level),
     life(player.life),
