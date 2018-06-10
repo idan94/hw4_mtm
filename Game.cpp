@@ -49,7 +49,7 @@ GameStatus Game::addPlayer(const char* playerName,const char* weaponName,
     for (int i = 0; i < maxPlayers; ++i) {
         if (players_array[i] &&
             strcmp(playerName, players_array[i]->getName()) == 0) {
-            return NAME_ALREADY_EXSISTS;
+            return NAME_ALREADY_EXISTS;
         }
     }
     Weapon new_weapon(weaponName, target, hit_strength);
@@ -116,7 +116,7 @@ void Game::assignArrToLeft()const {
         }
     }
 }
-bool Game::removeAllPlayersWIthWeakWeapon(int weaponStrength) {
+bool Game::removeAllPlayersWithWeakWeapon(int weaponStrength) {
     bool players_removed = false;
     for (int i = 0; i < maxPlayers; ++i) {
         if (players_array[i] &&

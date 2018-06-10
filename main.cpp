@@ -16,10 +16,10 @@ Game InputTest() {
     (game.addPlayer("sean", "light saver", LIFE, 6) == SUCCESS)?cout<<"pass test 2"<<endl:cout<<"failed test 2"<<endl;
     (game.addPlayer("liad", "pirate sword", STRENGTH, 7) == SUCCESS)?cout<<"pass test 3"<<endl:cout<<"failed test 3"<<endl;
     (game.addPlayer("ari", "lazer gun", LEVEL, 5) == SUCCESS)?cout<<"pass test 4"<<endl:cout<<"failed test 4"<<endl;
-    (game.addPlayer("sean", "TNT", LEVEL, 5) == NAME_ALREADY_EXSISTS)?cout<<"pass test 5"<<endl:cout<<"failed test 5"<<endl;
-    (game.addPlayer("ari", "TNT", LEVEL, 5) == NAME_ALREADY_EXSISTS)?cout<<"pass test 6"<<endl:cout<<"failed test 6"<<endl;
+    (game.addPlayer("sean", "TNT", LEVEL, 5) == NAME_ALREADY_EXISTS)?cout<<"pass test 5"<<endl:cout<<"failed test 5"<<endl;
+    (game.addPlayer("ari", "TNT", LEVEL, 5) == NAME_ALREADY_EXISTS)?cout<<"pass test 6"<<endl:cout<<"failed test 6"<<endl;
     (game.addPlayer("yuval", "ATOM", LEVEL, 10) == SUCCESS)?cout<<"pass test 7"<<endl:cout<<"failed test 7"<<endl;
-    (game.addPlayer("yuval", "ATOM", LEVEL, 10) == NAME_ALREADY_EXSISTS)?cout<<"pass test 8"<<endl:cout<<"failed test 8"<<endl;
+    (game.addPlayer("yuval", "ATOM", LEVEL, 10) == NAME_ALREADY_EXISTS)?cout<<"pass test 8"<<endl:cout<<"failed test 8"<<endl;
     (game.addPlayer("seana", "ATOM", LIFE, 10) == SUCCESS)?cout<<"pass test 9"<<endl:cout<<"failed test 9"<<endl;
     (game.addPlayer("orr", "ATOM", LIFE, 100) == GAME_FULL)?cout<<"pass test 10"<<endl:cout<<"failed test 10"<<endl;
     (game.addPlayer("sean", "ATOM", LIFE, 100) == GAME_FULL)?cout<<"pass test 11"<<endl:cout<<"failed test 11"<<endl;
@@ -82,18 +82,18 @@ void addStrength(Game &game){
 
 void remove(Game &game,int num){
     cout << "cheak remove " << endl;
-    (!game.removeAllPlayersWIthWeakWeapon(0))?cout<<"pass test 1"<<endl:cout<<"failed test 1"<<endl;
+    (!game.removeAllPlayersWithWeakWeapon(0))?cout<<"pass test 1"<<endl:cout<<"failed test 1"<<endl;
 
-    (!game.removeAllPlayersWIthWeakWeapon(5))?cout<<"pass test 2"<<endl:cout<<"failed test 2"<<endl;
+    (!game.removeAllPlayersWithWeakWeapon(5))?cout<<"pass test 2"<<endl:cout<<"failed test 2"<<endl;
 
-    (game.removeAllPlayersWIthWeakWeapon(15))?cout<<"pass test 3"<<endl:cout<<"failed test 3"<<endl;
+    (game.removeAllPlayersWithWeakWeapon(15))?cout<<"pass test 3"<<endl:cout<<"failed test 3"<<endl;
 
 }
 void inputTest2(Game &game){
     cout << "cheak input after remove " << endl;
     (game.addPlayer("tomer", "ak47", LIFE, 10) == SUCCESS)?cout<<"pass test 1"<<endl:cout<<"failed test 1"<<endl;
     (game.addPlayer("sagiv", "m16", LEVEL, 10) == SUCCESS)?cout<<"pass test 2"<<endl:cout<<"failed test 2"<<endl;
-    (game.addPlayer("sean", "m16", LEVEL, 10) == NAME_ALREADY_EXSISTS)?cout<<"pass test 3"<<endl:cout<<"failed test 3"<<endl;
+    (game.addPlayer("sean", "m16", LEVEL, 10) == NAME_ALREADY_EXISTS)?cout<<"pass test 3"<<endl:cout<<"failed test 3"<<endl;
 }
 void firstFight(Game &game) {
 
@@ -171,7 +171,7 @@ void simpleTest() {
     assert(game.addStrength("Alon", 10) == SUCCESS);
     assert(game.fight("Alon", "Gal") == SUCCESS);
     cout << game << endl;
-    assert(game.removeAllPlayersWIthWeakWeapon(13) == true);
+    assert(game.removeAllPlayersWithWeakWeapon(13) == true);
     cout << game << endl;
     cout << "End of Test()" << endl;
 }
@@ -180,32 +180,32 @@ void myTest(){
 
 }
 
-int GameRemoveAllPlayersWIthWeakWeaponTest(int *tests_passed) {
-    _print_mode_name("Testing GameRemoveAllPlayersWIthWeakWeapon function");
+int GameremoveAllPlayersWithWeakWeaponTest(int *tests_passed) {
+    _print_mode_name("Testing GameremoveAllPlayersWithWeakWeapon function");
     int test_number = 0;
     Game game = Game(4);
     game.addPlayer("Linoy", "lazer gun", LEVEL, 5);
     game.addPlayer("Nazar", "lazer gun", LEVEL, 7);
     game.addPlayer("Max", "lazer gun", LIFE, 3);
     game.addPlayer("Guy", "lazer gun", STRENGTH, 4);
-    game.removeAllPlayersWIthWeakWeapon(6);
+    game.removeAllPlayersWithWeakWeapon(6);
     test(game.addPlayer("Linoy", "lazer gun", LEVEL, 5) != SUCCESS,
-         "GameRemoveAllPlayersWIthWeakWeapon didn't remove the player correctly.",
+         "GameremoveAllPlayersWithWeakWeapon didn't remove the player correctly.",
          __LINE__,
          &test_number,
          tests_passed);
-    test(game.addPlayer("Nazar", "lazer gun", LEVEL, 5) != NAME_ALREADY_EXSISTS,
-         "GameRemoveAllPlayersWIthWeakWeapon removes players with weapon value higher than required.",
+    test(game.addPlayer("Nazar", "lazer gun", LEVEL, 5) != NAME_ALREADY_EXISTS,
+         "GameremoveAllPlayersWithWeakWeapon removes players with weapon value higher than required.",
          __LINE__,
          &test_number,
          tests_passed);
-    test(game.addPlayer("Max", "lazer gun", LEVEL, 5) != NAME_ALREADY_EXSISTS,
-         "GameRemoveAllPlayersWIthWeakWeapon removes players with weapon value higher than required.",
+    test(game.addPlayer("Max", "lazer gun", LEVEL, 5) != NAME_ALREADY_EXISTS,
+         "GameremoveAllPlayersWithWeakWeapon removes players with weapon value higher than required.",
          __LINE__,
          &test_number,
          tests_passed);
-    test(game.addPlayer("Guy", "lazer gun", LEVEL, 5) != NAME_ALREADY_EXSISTS,
-         "GameRemoveAllPlayersWIthWeakWeapon removes players with weapon value higher than required.",
+    test(game.addPlayer("Guy", "lazer gun", LEVEL, 5) != NAME_ALREADY_EXISTS,
+         "GameremoveAllPlayersWithWeakWeapon removes players with weapon value higher than required.",
          __LINE__,
          &test_number,
          tests_passed);
@@ -220,7 +220,7 @@ int main() {
     //simpleTest();
     //Test();
     int a=2;
-    GameRemoveAllPlayersWIthWeakWeaponTest(&a);
+    GameremoveAllPlayersWithWeakWeaponTest(&a);
     cout << "End of main" << endl;
     return 0;
 }

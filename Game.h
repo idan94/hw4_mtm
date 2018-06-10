@@ -10,7 +10,7 @@
 
 enum GameStatus{
     INVALID_PARAM,
-    NAME_ALREADY_EXSISTS,
+    NAME_ALREADY_EXISTS,
     GAME_FULL,
     NAME_DOES_NOT_EXIST,
     FIGHT_FAILED,
@@ -37,7 +37,7 @@ public:
      * @param target the target of the weapon
      * @param hit_strength the hit strength of the weapon
      * @return SUCCESS- if the player added
-     * NAME_ALREADY_EXSISTS- if the name of the player is already exist
+     * NAME_ALREADY_EXISTS- if the name of the player is already exist
      * GAME_FULL- if the game is full
      */
     GameStatus addPlayer(const char* playerName,const char* weaponName,
@@ -79,7 +79,7 @@ public:
      * @return true- if players has been removed
      * false- if not
      */
-    bool removeAllPlayersWIthWeakWeapon(int weaponStrength);
+    bool removeAllPlayersWithWeakWeapon(int weaponStrength);
     /**
      * gets 2 players, and make then fight, if one of them die- delete him
      * @param playerName1 the first player name
